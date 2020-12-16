@@ -17,11 +17,13 @@ def parse_text(text):
     return UF_PATTERN.findall(text)
 
 
-def calculate_passed_uf_ratio(uf_list):
+def count_uf_and_calculate_ratio(uf_list):
     avaluades = len(uf_list)
     aprovades = len([uf for uf in uf_list if int(uf.rsplit(" ",1)[1])>=5])
 
-    print(f"UF avaluades: {avaluades}\nUF aprovades: {aprovades}\nRatio d'UF aprovades: {((aprovades/avaluades)*100):.2f}%")
+    print(f"UF avaluades: {avaluades}\n"
+          f"UF aprovades: {aprovades}\n"
+          f"Ratio d'UF aprovades: {((aprovades/avaluades)*100):.2f}%")
 
 
 if __name__ == "__main__":
@@ -29,7 +31,7 @@ if __name__ == "__main__":
         try:
             extracted_text = convert_pdf_to_txt(argv[1])
             uf_list = parse_text(extracted_text)
-            calculate_passed_uf_ratio(uf_list)
+            count_uf_and_calculate_ratio(uf_list)
         except FileNotFoundError as e:
             print(f"No existeix el fitxer {argv[1]}.")
     else:
