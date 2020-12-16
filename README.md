@@ -16,7 +16,7 @@ In case you have both Python versions, 2 and 3, installed in your computer:
 Take into account the first time running the "tika" library it will need to download and install some libraries. This process may take a couple of minutes.
 
 ## Running
-Run in Terminal from the folder where the script and the PDF are placed:
+Run from Terminal:
 
 `$ python path/to/UFAprovadesVsAvaluades.py path/to/Acta.pdf`
 
