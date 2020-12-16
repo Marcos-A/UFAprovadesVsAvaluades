@@ -5,7 +5,7 @@ import re
 from sys import argv
 from tika import parser
 
-PATTERN = re.compile('UF\d\d - \d{2,3} \d{1,2}')
+UF_PATTERN = re.compile('UF\d\d - \d{2,3} \d{1,2}')
 
 
 def convert_pdf_to_txt(filename):
@@ -14,12 +14,12 @@ def convert_pdf_to_txt(filename):
 
 
 def parse_text(text):
-    return PATTERN.findall(text)
+    return UF_PATTERN.findall(text)
 
 
 def calculate_passed_uf_ratio(uf_list):
     avaluades = len(uf_list)
-    aprovades = len([uf.rsplit(" ",1)[1] for uf in uf_list if int(uf.rsplit(" ",1)[1])>=5])
+    aprovades = len([uf for uf in uf_list if int(uf.rsplit(" ",1)[1])>=5])
 
     print(f"UF avaluades: {avaluades}\nUF aprovades: {aprovades}\nRatio d'UF aprovades: {((aprovades/avaluades)*100):.2f}%")
 
