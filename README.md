@@ -1,7 +1,7 @@
 # UFAprovadesVsAvaluades
 Forked from: [https://gist.github.com/jherna/56099f3a6f58a3e3f30ccfa3ee87d5e5](https://gist.github.com/jherna/56099f3a6f58a3e3f30ccfa3ee87d5e5).
 
-_Script_ que compta el total d'UF aprovades i avaluades a partir de les actes en PDF descarregades de SAGA, i proporciona la ratio d'aprovades sobre el total en format de percentatge.
+_Script_ que, a partir de les actes en PDF descarregades de SAGA, compta el total d'UF aprovades i avaluades i calcula la ratio d'aprovades sobre el total en format de percentatge.
 
 ## Installation
 Download the script. Place the PDF in the root folder.
