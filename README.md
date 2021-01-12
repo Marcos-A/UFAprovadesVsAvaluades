@@ -13,7 +13,9 @@ In case you have both Python versions, 2 and 3, installed in your computer:
 
 `pip3 install tika`
 
-Take into account the first time running the "tika" library it will need to download and install some libraries. This process may take a couple of minutes.
+Take into account the first time running the "tika" library it will need to download and install some Java libraries. This process may take a couple of minutes.
+
+Besides, in case you need to use the script in a server, you'll need to download the Java tika server from Apache and it must be running when you use python-tika. Then, the Python-tika module will allow you to make requests to this server from this Python script.
 
 ## Running
 Run from Terminal:
